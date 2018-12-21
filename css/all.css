@@ -274,9 +274,9 @@ h5 {
 
 /*改變螢幕尺寸*/
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
     .container {
-        grid-template-columns: 300px;
+        grid-template-columns: 450px;
         grid-auto-rows: 50px;
         grid-gap: 10px;
         grid-auto-rows: 100px;
