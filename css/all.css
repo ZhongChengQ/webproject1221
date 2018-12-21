@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*font*/
+/*fontSize*/
+a {
+    text-decoration: none;
+    color: black;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Caveat', cursive;
+}
+
+.font-NBC {
+    font-family: 'Nanum Brush Script', cursive;
+}
+
+.fz24px {
+    font-family: 'Nanum Brush Script', cursive;
+    font-size: 24px;
+}
+
+.fz2r {
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+}
+
+.fz3r {
+    font-family: 'Caveat', cursive;
+    font-size: 3rem;
+}
+
+.f-bold {
+    font-weight: bolder;
+}
+
+/*fontPosition*/
+.text-center {
+    text-align: center;
+}
+
+.text-bottom {
+    text-align: center;
+    vertical-align: bottom;
+}
+
+/*Color*/
+.lightgrey {
+    color: rgba(247, 241, 227, 1.0);
+}
+
+.grey {
+    color: rgba(247, 241, 227, .5);
+}
+
+.luckypoint {
+    color: rgba(44, 44, 84, 1.0);
+}
+
+.darkperiwinkle {
+    color: rgba(87, 95, 207, 1.0);
+}
+
+.body-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: -1;
+    background-image: url(../images/abstract-antique-backdrop-164005.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width: 1920px) {
+
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 20px;
+        grid-auto-rows: 100px;
+        z-index: 0;
+    }
+
+    /*網站標題區*/
+    .box1 {
+        background: rgba(29, 209, 161, 1.0);
+        grid-area: 1/1/2/4;
+        display: grid;
+        grid-template-columns: 1fr 1fr 6fr 50px;
+        grid-auto-rows: 50px;
+        grid-column-gap: 5px;
+        box-shadow: 5px 10px 30px #000;
+        border-top-right-radius: 4rem;
+        border-bottom-right-radius: 4rem;
+    }
+
+    .webGrid {
+        z-index: 1;
+    }
+
+    .webGrid.item1 {
+        background-image: url(../images/tank.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        grid-area: 1/1/3/2;
+    }
+
+    .webGrid.item2 {
+        grid-area: 1/2/3/3;
+    }
+
+    .webGrid.item3 {
+        grid-area: 1/3/3/4;
+        background-image: url(../images/book.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        display: none;
+    }
+
+    /*選單區*/
+    .box2 {
+        background: #74b9ff;
+        grid-area: 1/4/2/6;
+        box-shadow: 5px 10px 30px #000;
+        border-top-left-radius: 4rem;
+        border-bottom-left-radius: 4rem;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .roundCorner {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .menuGrid {
+        z-index: 99;
+        width: 100%;
+        height: 80px;
+        margin: 10px;
+        display: grid;
+        grid-template-columns: 100px repeat(5, 1fr) 20px;
+        grid-auto-rows: 80px;
+        grid-gap: 10px;
+    }
+
+    .menuIcon {
+        background-image: url(../images/book.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        grid-area: 1/1/2/2;
+    }
+
+    .menuGrid li {
+        white-space: nowrap;
+        z-index: 99;
+        padding: 20px;
+    }
+
+    .menuGrid a {
+        color: rgba(87, 95, 207, 1.0);
+        display: block;
+        text-decoration: none;
+        z-index: 99;
+        border-bottom: 5px solid rgba(87, 95, 207, .5);
+        transition: border-bottom .5s;
+    }
+
+    .menuGrid a:hover {
+        border-bottom: 5px solid rgba(87, 95, 207, 1.0);
+        transition: border-bottom .5s;
+    }
+
+    .menuGrid ul {
+        background: #60a3bc;
+        display: none;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .menuGrid li:hover>ul {
+        display: block;
+    }
+
+    /*主要視覺區*/
+    .box3 {
+        background: rgba(46, 204, 113, 1.0);
+        grid-area: 2/1/10/6;
+        background-image: url(../images/arches-architectural-design-architecture-135018.jpg);
+        background-size: contain;
+        background-position: center;
+        box-shadow: 5px 10px 30px #000;
+        opacity: .9;
+    }
+
+    .box4 {
+        background: #a29bfe;
+        grid-area: 10/1/15/3;
+        box-shadow: 5px 10px 30px #000;
+        opacity: .9;
+    }
+
+    .box5 {
+        background: #fab1a0;
+        grid-area: 10/3/15/6;
+        box-shadow: 5px 10px 30px #000;
+        opacity: .9;
+    }
+
+    .box6 {
+        background: #2d3436;
+        grid-area: 15/1/17/6;
+    }
+
+    /*頁面樣式區*/
+    .mainView {
+        background-image: url(../images/ancient.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        grid-area: 2/1/10/6;
+        box-shadow: 5px 10px 30px #000;
+        z-index: 0;
+        opacity: .9;
+    }
+
+    .main {
+        background: rgba(200, 200, 200, .8);
+        grid-area: 3/2/9/5;
+        box-shadow: 5px 10px 30px #000;
+        z-index: 1;
+    }
+
+    .article {
+        height: 660px;
+        margin: 20px;
+    }
+
+    .title {
+        height: 20%;
+        padding: 30px;
+        border-bottom: medium groove rgba(180, 180, 180, .5);
+    }
+
+    .content {
+        height: 80%;
+        padding: 30px;
+        overflow: auto;
+    }
+
+    .footbox {
+        background: #2d3436;
+        grid-area: 10/1/12/6;
+        z-index: 0;
+        opacity: 1;
+    }
+
+}
+
+/*改變螢幕尺寸*/
+@media screen and (max-width: 500px) {
+    .container {
+        grid-template-columns: 450px;
+        grid-auto-rows: 50px;
+        grid-gap: 10px;
+        grid-auto-rows: 100px;
+    }
+
+    .box1 {
+        grid-area: 1/1/2/2;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) 20px;
+        grid-auto-rows: 100px;
+        grid-column-gap: 5px;
+    }
+
+    .webGrid {
+        z-index: 1;
+    }
+
+    .webGrid.item1 {
+        background-image: url(../images/tank.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        grid-area: 1/1/2/2;
+    }
+
+    .webGrid.item2 {
+        grid-area: 1/2/2/3;
+    }
+
+    .webGrid.item3 {
+        grid-area: 1/3/2/4;
+        display: block;
+    }
+
+    .box2 {
+        display: none;
+    }
+
+    .box3 {
+        grid-area: 2/1/5/2;
+    }
+
+    .box4 {
+        grid-area: 5/1/7/2;
+    }
+
+    .box5 {
+        grid-area: 7/1/9/2;
+    }
+
+    .box6 {
+        grid-area: 9/1/11/2;
+    }
+
+    .mainView {
+        background-image: url(../images/ancient.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        grid-area: 2/1/5/2;
+        box-shadow: 5px 10px 30px #000;
+        z-index: 0;
+        opacity: .9;
+    }
+
+    .main {
+        grid-area: 2/1/5/2;
+        box-shadow: 5px 10px 30px #000;
+        z-index: 1;
+        
+    }
+    .article {
+        height: 300px;
+    }
+
+    .title {
+        font-size: 16px;
+        height: 20%;
+        padding: 10px;
+        border-bottom: medium groove rgba(180, 180, 180, .5);
+    }
+
+    .content {
+        height: 80%;
+        font-size: 12px;
+        padding: 10px;
+    }
+    .footbox {
+        font-size: 12px;
+        background: #2d3436;
+        grid-area: 5/1/7/2;
+        z-index: 2;
+        opacity: 1;
+    }
+}
